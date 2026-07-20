@@ -1,6 +1,6 @@
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
-from aiogram import Router, F, Bot  
+from aiogram import Router, F  
 from aiogram.filters import Command
 from aiogram.types import (
     Message,
@@ -74,7 +74,7 @@ async def send_question(message: Message, state: FSMContext):
         )
         await state.clear()
 
-@router.message(QuizStates.answering, ~F.text.startwith('/'))
+@router.message(QuizStates.answering, ~F.text.startswith('/'))
 async def handle_answer(message: Message, state: FSMContext):
     data = await state.get_data()
     q_index = data["current_question"]
