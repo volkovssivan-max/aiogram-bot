@@ -1,0 +1,6 @@
+name = "aiogram-bot"
+main = "main.py"
+compatibility_date = "2026-07-20"
+
+[vars]
+BOT_TOKEN = "8661475607:AAEmB9G_BKgKkfA4TjZlDXLtNUmaacWULWY" 
